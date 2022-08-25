@@ -1,6 +1,9 @@
 var map;
 var service;
 var infowindow;
+var cafeName = document.getElementById('cafe-name')
+var cafeAddress = document.getElementById('cafe-address')
+var cafePic = document.getElementById('cafe-pic')
 // let myPlace = $reference input zipcode, error if not 5-digit number
 // function toLatLong (myPlace) {
 //     let myLatLong = some operation on myPlace
@@ -27,6 +30,9 @@ function callback(results, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
     for (var i = 0; i < results.length; i++) {
       console.log(results[i]);
+      cafePic.innerHTML =results[i].photos;
+      cafeName.innerHTML = results[i].name;
+      cafeAddress.textContent = results[i].vicinity
     }
     } else {
         console.log("Bad request");}
