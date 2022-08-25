@@ -41,28 +41,28 @@ function callback(results, status) {
 
 
 // JS CODE TO ACTIVATE MODALS ON IMG CLICK!!!
-let drinksImgEl = $("#drinksImg");
-let diffDrinksModalEl = $("#diffDrinksModal");
-drinksImgEl.on( "click", function () {
-     diffDrinksModalEl.addClass( "is-active" );
+let drinksImgEl = $('#drinksImg');
+let diffDrinksModalEl = $('#diffDrinksModal');
+drinksImgEl.on( 'click', function () {
+     console.log("click!!!!"); 
+     diffDrinksModalEl.addClass( 'is-active' );
 })
-
-let localImgEl = $("#localImg");
-let mapEl = $("#map");
-localImgEl.on( "click", function () {
-     mapEl.addClass( "is-active" );
+let localImgEl = $('#localImg');
+let localModalEl = $('#localModal');
+localImgEl.on( 'click', function () {
+     console.log("click!!!!"); 
+     localModalEl.addClass( 'is-active' );
 })
-
 let quizImgEl = $("#quizImg");
 let caffeineQuizModalEl = $("#caffeineQuizModal");
 quizImgEl.on( "click", function () {
+     console.log("click!!!!"); 
      caffeineQuizModalEl.addClass( "is-active" );
 })
-
 
 let modalCloseBtnEl = $(".modal-close");
 modalCloseBtnEl.on ( "click", function () {
     diffDrinksModalEl.removeClass( "is-active" );
-    mapEl.removeClass( "is-active" );
+    localModalEl.removeClass( "is-active" );
     caffeineQuizModalEl.removeClass( "is-active" );
 })
