@@ -35,7 +35,7 @@
         </figure>
       </div>
 
-      <div id="localImg" class="column is-one-quarter">
+      <div id="localImg" class="column is-one-third">
         <figure class="image">
           <img src="./assets/images/coffeeMap.png">
         </figure>
@@ -83,14 +83,27 @@
       <div id="caffeineQuizModal" class="modal">
 
         <div class="modal-background"></div>
-        <div class="modal-content card" id="local-cafe">
-          <!-- <p>MODAL THREE IS AWESOME!!!!!</p>
-          <div class="card p-2">
-          <div class="card m-5 p-3"><h2>Image: <img id="cafe-pic"></h2></div>       
-          <div class="card m-5 p-3"><h2>Name: <span id="cafe-name"></span></h2></div>          
-          <div class="card m-5 p-3"><h2>Address: <span id="cafe-address"></span></h2></div> -->
+        <div class="modal-content m-3">
+            <div id="caffeineQuizStart" class="card">
+                <header class="card-header">
+                    <p class="card-header-title is-centered">
+                      Caffeine Intake Quiz
+                    </p>
+                </header>
+                <button class="button is-medium is-warning is-centered" id="start-button">Start Coffee Quiz</button>
+            </div>
+            <div id="caffeineQuizMain" class="card">
+                <section id="question"></section>
+                <section id="answers" class="answers">
+                    <ul>
+                        <li><button class="choices" id="answer1" value="a">Answer1</button></li>
+                        <li><button class="choices" id="answer2" value="b">Answer2</button></li>
+                        <li><button class="choices" id="answer3" value="c">Answer3</button></li>
+                        <li><button class="choices" id="answer4" value="d">Answer4</button></li>
+                    </ul>
+                </section>
+            </div>
         </div>
-      </div>
         <button class="modal-close is-large" aria-label="close"></button>
 
       </div>
