@@ -1,4 +1,4 @@
-// ICED Coffee
+// Iced Coffee
 var icedCoffee = document.querySelector("#ice");
 
 function getColdData() {
@@ -14,24 +14,25 @@ function displayIceData(data) {
     // Display coffee title
     const iceCoffeeName = data[i].title;
     const iceDiv = document.getElementById("coldDiv");
-    const heading = document.createElement("div");
-    heading.innerHTML = iceCoffeeName;
-    iceDiv.appendChild(heading);
-
-    // const iceCoffeeIngredients = data[i].ingredients;
-    // const iceIngDiv = document.getElementById("coldDiv");
-    // const heading = document.createElement("div");
-    // heading.innerHTML
-    // const iceCoffeeImg = document.createElement("img");
-    // iceCoffeeImg.src = coldDiv.image;
-    // coldDiv.appendChild(iceCoffeeImg);
+    const headingIceTitle = document.createElement("div");
+    headingIceTitle.innerHTML = iceCoffeeName;
+    iceDiv.appendChild(headingIceTitle);
+    // Display Coffee Ingredients
+    const iceCoffeeIngredients = data[i].ingredients;
+    const iceIngDiv = document.getElementById("coldDiv");
+    const headingIceIngredients = document.createElement("h1");
+    headingIceIngredients.innerHTML = iceCoffeeIngredients;
+    iceIngDiv.appendChild(headingIceIngredients);
+    // Display COffee Images
+    const coffeeIceImg = data[i].image;
+    const iceImageDiv = document.getElementById("coldDiv");
+    const headingIceImages = document.createElement("img");
+    headingIceImages.innerHTML = coffeeIceImg;
+    iceImageDiv.appendChild(headingIceImages);
+    document.body.style.backgroundImage = "ColdURL('" + coldDiv.image + "')";
   }
 }
 icedCoffee.addEventListener("click", getColdData);
-
-// fetch("https://api.sampleapis.com/coffee/iced")
-//   .then((resp) => json())
-//   .then((data) => console.log(data));
 
 //Hot Coffee
 var hotCoffee = document.querySelector("#hot");
@@ -48,18 +49,23 @@ function displayHotData(data) {
     console.log(data[i].title);
     const hotCoffeeName = data[i].title;
     const hotDiv = document.getElementById("hotDiv");
-    const heading = document.createElement("div");
-    heading.innerHTML = hotCoffeeName;
-    hotDiv.appendChild(heading);
+    const headingHotTitle = document.createElement("div");
+    headingHotTitle.innerHTML = hotCoffeeName;
+    hotDiv.appendChild(headingHotTitle);
+    // Display Coffee Ingredients
+    const hotCoffeeIngredients = data[i].ingredients;
+    const hotIngDiv = document.getElementById("hotDiv");
+    const headingHotIngredients = document.createElement("h1");
+    headingHotIngredients.innerHTML = hotCoffeeIngredients;
+    hotIngDiv.appendChild(headingHotIngredients);
+    // Display COffee Images
+    const coffeeImg = data[i].image;
+    const hotImageDiv = document.getElementById("hotDiv");
+    const headingImage = document.createElement("img");
+    headingImages.innerHTML = coffeeImg;
+    hotImageDiv.appendChild(headingImage);
+    document.body.style.backgroundImage = "hotURL('" + hotDiv.image + "')";
   }
 }
+
 hotCoffee.addEventListener("click", getHotData);
-
-var hotDrink = document.createElement("div");
-// hotDrink.appendChild(hotCoffee);
-// ice.innerHTML = results[i].getHotData;
-
-// // function displayHotData(data) {
-// const hotCoffee = data.drinks[0];
-// const hotDiv = document.getElementById("hot");
-// // }
