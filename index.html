@@ -16,37 +16,45 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <!-- <link rel="stylesheet" type="text/css" href="./style.css" />  THIS NEEDS LINKED-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-  </head>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
-  <body>
+</head>
+
+<body>
+  <div class="titleImage"></div>
     <header id="varistasHeader">
-      <h1>Varista's Digital Coffeeshop</h1>
+        <h1 class="has-text-centered is-size-1 m-3">Varista's Digital Coffeeshop</h1>
     </header>
 
-    <container
-      id="varistasThreeImgLinks"
-      class="columns is-multiline is-centered"
-    >
-      <div id="drinksImg" class="column is-one-quarter">
+    <container id="varistasThreeImgLinks" class="columns is-multiline is-centered">
+
+      <div id="drinksImg" class="column is-one-third">
         <figure class="image">
-          <img src="https://bulma.io/images/placeholders/128x128.png" />
+          <img src="./assets/images/coffeeDrinks.png">
         </figure>
       </div>
 
-      <div id="localImg" class="column is-one-third">
+      <!-- <div id="localImg" class="column is-one-third">
         <figure class="image">
           <img src="./assets/images/coffeeMap.png" />
         </figure>
+      </div> -->
+
+      <div id="local-cafe" class="column is-one-third">
+        <div id="localImg">
+          <figure class="image">
+            <img src="./assets/images/coffeeLocal.png">
+          </figure>
+        </div>
+        <input id="userZip" class="input" type="text" placeholder="Enter a Zipcode">
+        <button id="location-search" class="is-rounded" style="height:40px">Search</button>
+
       </div>
 
-      <div id="quizImg" class="column is-one-quarter">
+      <div id="quizImg" class="column is-one-third">
         <figure class="image">
-          <img src="https://bulma.io/images/placeholders/128x128.png" />
+          <img src="./assets/images/coffeeQuiz.png">
         </figure>
       </div>
     </container>
@@ -80,58 +88,44 @@
       </div>
 
       <div id="localModal" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-          <div class="card"><p>HERE GOES MODAL TWO!!!!!</p></div>
-          <!-- <div class="card"><h2>Image: <img id="cafe-pic"></h2></div>       
-            <div class="card"><h2>Name: <span id="cafe-name"></span></h2></div>          
-            <div class="card"><h2>Address: <span id="cafe-address"></span></h2></div> -->
-          <!-- <div class="card"><img src="https://bulma.io/images/placeholders/128x128.png"></div>
-            <div class="card"><img src="https://bulma.io/images/placeholders/128x128.png"></div> -->
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
+
+          <div class="modal-background"></div>
+          <div class="modal-content">
+
+            <p>HERE GOES MODAL TWO!!!!!</p>
+          </div>
+          <button class="modal-close is-large" aria-label="close"></button>
+
       </div>
+
 
       <div id="caffeineQuizModal" class="modal">
         <div class="modal-background"></div>
         <div class="modal-content m-3">
           <div id="caffeineQuizStart" class="card">
             <header class="card-header">
-              <p class="card-header-title is-centered">Caffeine Intake Quiz</p>
+              <p id="quizHeader" class="card-header-title is-centered">
+                Caffeine Intake Quiz
+              </p>
             </header>
-            <button
-              class="button is-medium is-warning is-centered"
-              id="start-button"
-            >
-              Start Coffee Quiz
-            </button>
+            <div id="startBtnDiv">
+              <button class="button is-small is-warning" id="start-button">Start Coffee Quiz</button>
+            </div>
           </div>
-          <div id="caffeineQuizMain" class="card">
+
+          <div id="caffeineQuizMain" class="card hide">
             <section id="question"></section>
             <section id="answers" class="answers">
               <ul>
-                <li>
-                  <button class="choices" id="answer1" value="a">
-                    Answer1
-                  </button>
-                </li>
-                <li>
-                  <button class="choices" id="answer2" value="b">
-                    Answer2
-                  </button>
-                </li>
-                <li>
-                  <button class="choices" id="answer3" value="c">
-                    Answer3
-                  </button>
-                </li>
-                <li>
-                  <button class="choices" id="answer4" value="d">
-                    Answer4
-                  </button>
-                </li>
+                <li><button class="choices" id="answer1" value="a">Answer1</button></li>
+                <li><button class="choices" id="answer2" value="b">Answer2</button></li>
+                <li><button class="choices" id="answer3" value="c">Answer3</button></li>
+                <li><button class="choices" id="answer4" value="d">Answer4</button></li>
               </ul>
             </section>
+          </div>
+          <div id="caffeineQuizOver" class="card">
+
           </div>
         </div>
         <button class="modal-close is-large" aria-label="close"></button>
