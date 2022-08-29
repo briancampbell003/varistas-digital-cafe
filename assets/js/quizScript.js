@@ -1,4 +1,4 @@
-// SCRIPT FOR CAFFEINE INTAKE
+// SCRIPT FOR QUIZ
 var start = document.querySelector("#start-button")
 start.addEventListener("click", nextQuestion);
 
@@ -8,6 +8,7 @@ let questionIndex = 0;
 let caffeineScore = 0;
 
 function nextQuestion() {
+  
   const questionArr = [
     "How many cans of cola (Coke, Pepsi, etc.- diet or otherwise) have you had today?",
     "How many shots of espresso have you had today, including those in lattes, cappucinos, and the like?",
@@ -24,7 +25,9 @@ function nextQuestion() {
     ["None", "50mg", "100mg", "200mg or more"]
   ]
 
-    quizMain.removeClass( "hide" );
+    let startBtnEl = $('#startBtnDiv');
+    startBtnEl.addClass( 'hide' );
+    quizMain.removeClass( 'hide' );
     questionEl.text(questionArr[questionIndex]);
 
 
@@ -73,7 +76,7 @@ function quizOver(caffeineScore) {
   if (caffeineScore < 2) {
     quizResultsEl.text ("Doctor, doctor, get us a coffee, stat! Return to our main page to find coffee recipes or local cafes!")
   } else if ( (2 <= caffeineScore) & (caffeineScore <= 5) ) {
-    quizResultsEl.text ("You've had plenty of caffeine today, but if you insist then by all means return to our main page for drink recipts or local cafes!")
+    quizResultsEl.text ("You've had a fair amount of caffeine today, but feel free to return to our main page for drink ideas or to find a local cafe!")
   } else {
     quizResultsEl.text ("Woah!!! Slow down partner. Maybe some water instead of a coffee?")
   }

@@ -2,9 +2,11 @@
     display: none;
 }
 
-.body{
-    background-color: lightslategray;
-}
+/* body {
+
+    background-image: url("../images/bgTEST.png");
+    background-size: contain;
+} */
 
 .titleImage {
     border: 1px black solid;
@@ -17,8 +19,8 @@
 }
 
 #quizHeader {
-    color: antiquewhite;
-    background-color: rgb(65, 35, 10);
+    color: rgb(65, 35, 10);
+    background-color: antiquewhite;
 }
 
 #start-button {
