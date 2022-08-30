@@ -60,12 +60,12 @@ function displayHotData(data) {
     headingHotIngredients.innerHTML = hotCoffeeIngredients;
     hotIngDiv.appendChild(headingHotIngredients);
     // Display COffee Images
-    const coffeeImg = data[i].image;
-    const hotImageDiv = document.getElementById("hotDiv");
-    const headingImage = document.createElement("img");
-    headingImages.innerHTML = coffeeImg;
-    hotImageDiv.appendChild(headingImage);
-    document.body.style.backgroundImage = "hotURL('" + hotDiv.image + "')";
+    // const coffeeImg = data[i].image;
+    // const hotImageDiv = document.getElementById("hotDiv");
+    // const headingImage = document.createElement("img");
+    // headingImages.innerHTML = coffeeImg;
+    // hotImageDiv.appendChild(headingImage);
+    // document.body.style.backgroundImage = "hotURL('" + hotDiv.image + "')";
   }
 }
 
