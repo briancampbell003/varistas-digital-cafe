@@ -1,31 +1,49 @@
 .hide {
-    display: none;
+  display: none;
 }
 
-/* body {
-
-    background-image: url("../images/bgTEST.png");
-    background-size: contain;
-} */
+.body {
+  background-color: rgb(247, 231, 210);
+  height: 1200px;
+}
 
 .titleImage {
-    border: 1px black solid;
-    height: 300px;
-    background-image: url(https://i.pinimg.com/originals/18/66/06/18660631f18bd2a4205c4dc0bd84501c.jpg);
-    background-size: cover;
-    background-position: -100px;
-    background-repeat: no-repeat;
-    background-position: center;
+  border: 1px black solid;
+  height: 300px;
+  background-image: url("../images/varistasTitle");
+  background-size: cover;
+  background-position: -100px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#varistasHeader {
+  font-style: italic;
 }
 
 #quizHeader {
-    color: rgb(65, 35, 10);
-    background-color: antiquewhite;
+  color: rgb(65, 35, 10);
+  background-color: antiquewhite;
 }
 
 #start-button {
-    text-align: center;
-    width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
+  text-align: center;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+#drinkButtons {
+  text-align: center;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.footer {
+  display: flex;
+  bottom: 0px;
+  align-items: center;
+  justify-content: center;
+  border: 3px;
+  border-color: black;
 }
