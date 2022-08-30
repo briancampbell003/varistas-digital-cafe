@@ -32,6 +32,7 @@ function displayIceData(data) {
     document.body.style.backgroundImage = "ColdURL('" + coldDiv.image + "')";
   }
 }
+
 icedCoffee.addEventListener("click", getColdData);
 
 //Hot Coffee
