@@ -1,5 +1,6 @@
 // Iced Coffee
 var icedCoffee = document.querySelector("#ice");
+var icedIndex = 0;
 
 function getColdData() {
   const coldURL = "https://api.sampleapis.com/coffee/iced";
@@ -9,34 +10,37 @@ function getColdData() {
 }
 function displayIceData(data) {
   console.log(data);
-  for (let i = 0; i < data.length; i++) {
-    console.log(data[i].title);
-    // Display coffee title
-    const iceCoffeeName = data[i].title;
-    const iceDiv = document.getElementById("coldDiv");
-    const headingIceTitle = document.createElement("div");
-    headingIceTitle.innerHTML = iceCoffeeName;
-    iceDiv.appendChild(headingIceTitle);
-    // Display Coffee Ingredients
-    const iceCoffeeIngredients = data[i].ingredients;
-    const iceIngDiv = document.getElementById("coldDiv");
-    const headingIceIngredients = document.createElement("h1");
-    headingIceIngredients.innerHTML = iceCoffeeIngredients;
-    iceIngDiv.appendChild(headingIceIngredients);
-    // Display COffee Images
-    const coffeeIceImg = data[i].image;
-    const iceImageDiv = document.getElementById("coldDiv");
-    const headingIceImages = document.createElement("img");
-    headingIceImages.innerHTML = coffeeIceImg;
-    iceImageDiv.appendChild(headingIceImages);
-    document.body.style.backgroundImage = "ColdURL('" + coldDiv.image + "')";
-  }
+
+  console.log(data[icedIndex].title);
+  // Empty Ice coffee old info
+  const iceDiv = document.getElementById("coldDiv");
+  iceDiv.innerHTML = "";
+
+  // Display Ice coffee title
+  const iceCoffeeName = data[icedIndex].title;
+  const headingIceTitle = document.createElement("div");
+  headingIceTitle.innerHTML = iceCoffeeName;
+  iceDiv.appendChild(headingIceTitle);
+  // Display Ice Coffee Ingredients
+  const iceCoffeeIngredients = data[icedIndex].ingredients;
+  const headingIceIngredients = document.createElement("h1");
+  headingIceIngredients.innerHTML = iceCoffeeIngredients;
+  iceDiv.appendChild(headingIceIngredients);
+  // Display Ice COffee Images
+  const coffeeIceImg = data[icedIndex].image;
+  const headingIceImages = document.createElement("div");
+  headingIceImages.innerHTML = coffeeIceImg;
+  headingIceImages.innerHTML = '<img src="' + coffeeIceImg + '">';
+  iceDiv.appendChild(headingIceImages);
+
+  icedIndex++;
 }
 
 icedCoffee.addEventListener("click", getColdData);
 
 //Hot Coffee
 var hotCoffee = document.querySelector("#hot");
+var hotIndex = 0;
 
 function getHotData() {
   const hotURL = "https://api.sampleapis.com/coffee/hot";
@@ -46,27 +50,31 @@ function getHotData() {
 }
 function displayHotData(data) {
   console.log(data);
-  for (let i = 0; i < data.length; i++) {
-    console.log(data[i].title);
-    const hotCoffeeName = data[i].title;
-    const hotDiv = document.getElementById("hotDiv");
-    const headingHotTitle = document.createElement("div");
-    headingHotTitle.innerHTML = hotCoffeeName;
-    hotDiv.appendChild(headingHotTitle);
-    // Display Coffee Ingredients
-    const hotCoffeeIngredients = data[i].ingredients;
-    const hotIngDiv = document.getElementById("hotDiv");
-    const headingHotIngredients = document.createElement("h1");
-    headingHotIngredients.innerHTML = hotCoffeeIngredients;
-    hotIngDiv.appendChild(headingHotIngredients);
-    // Display COffee Images
-    // const coffeeImg = data[i].image;
-    // const hotImageDiv = document.getElementById("hotDiv");
-    // const headingImage = document.createElement("img");
-    // headingImages.innerHTML = coffeeImg;
-    // hotImageDiv.appendChild(headingImage);
-    // document.body.style.backgroundImage = "hotURL('" + hotDiv.image + "')";
-  }
+
+  console.log(data[hotIndex].title);
+
+  // Empty Hot coffee old info
+  const warmDiv = document.getElementById("hotDiv");
+  warmDiv.innerHTML = "";
+
+  // Display Hot Coffee Title
+  const hotCoffeeName = data[hotIndex].title;
+  const headingHotTitle = document.createElement("div");
+  headingHotTitle.innerHTML = hotCoffeeName;
+  warmDiv.appendChild(headingHotTitle);
+
+  // Display Hot Coffee Ingredients
+  const hotCoffeeIngredients = data[hotIndex].ingredients;
+  const headingHotIngredients = document.createElement("h1");
+  headingHotIngredients.innerHTML = hotCoffeeIngredients;
+  warmDiv.appendChild(headingHotIngredients);
+
+  // Display COffee Images
+  const coffeeHotImg = data[hotIndex].image;
+  const headingHotImages = document.createElement("div");
+  headingHotImages.innerHTML = '<img src="' + coffeeHotImg + '">';
+  warmDiv.appendChild(headingHotImages);
+  hotIndex++;
 }
 
 hotCoffee.addEventListener("click", getHotData);

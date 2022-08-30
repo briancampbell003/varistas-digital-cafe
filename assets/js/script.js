@@ -36,6 +36,7 @@ let parseZip = function () {
 
   // let myLat = JSON.parse(localStorage.getItem("myLat"));
   // let myLon = JSON.parse(localStorage.getItem("myLon"));
+};
 
 }
 
@@ -47,18 +48,18 @@ let initMap = function (myLat, myLon) {
 
   map = new google.maps.Map(document.getElementById('localModal'), {
     center: myPlace,
-    zoom: 15
+    zoom: 15,
   });
 
   var request = {
     location: myPlace,
-    radius: '2500',
-    type: ['cafe']
+    radius: "2500",
+    type: ["cafe"],
   };
 
   service = new google.maps.places.PlacesService(map);
   service.nearbySearch(request, callback);
-}
+};
 
 function callback(results, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -86,9 +87,9 @@ function callback(results, status) {
       cafeDetails.setAttribute("href", "https://www.google.com/maps/search/?api=1&query=Google&query_place_id=" + cafeLink)
 
       localCafe.appendChild(cafeDetails);
-      cafeDetails.appendChild(cafeName)
-      cafeDetails.appendChild(cafeAddress)
-      cafeDetails.appendChild(cafeRating)
+      cafeDetails.appendChild(cafeName);
+      cafeDetails.appendChild(cafeAddress);
+      cafeDetails.appendChild(cafeRating);
       cafeName.innerHTML = results[i].name;
       cafeAddress.innerHTML = results[i].vicinity;
       cafeRating.innerHTML = "Rating: " + results[i].rating;
@@ -97,20 +98,12 @@ function callback(results, status) {
   } else {
     console.log("Bad request");
   }
-
 }
 
-
-
-
-
-
-
-locationSrc.addEventListener('click', function () {
+locationSrc.addEventListener("click", function () {
   console.log("CLICK");
   parseZip();
-
-})
+});
 
 clearSrc.addEventListener('click', function () {
 localCafe.innerHTML = "";
@@ -118,30 +111,30 @@ localCafe.innerHTML = "";
 })
 
 // JS CODE TO ACTIVATE MODALS ON IMG CLICK!!!
-let drinksImgEl = $('#drinksImg');
-let diffDrinksModalEl = $('#diffDrinksModal');
-drinksImgEl.on('click', function () {
+let drinksImgEl = $("#drinksImg");
+let diffDrinksModalEl = $("#diffDrinksModal");
+drinksImgEl.on("click", function () {
   console.log("click!!!!");
   diffDrinksModalEl.addClass('is-active');
 })
 
-let localImgEl = $('#localImg');
-let localModalEl = $('#localModal');
-localImgEl.on('click', function () {
+let localImgEl = $("#localImg");
+let localModalEl = $("#localModal");
+localImgEl.on("click", function () {
   console.log("click!!!!");
   localModalEl.addClass('is-active');
 })
 
-let quizImgEl = $('#quizImg');
-let caffeineQuizModalEl = $('#caffeineQuizModal');
-quizImgEl.on('click', function () {
+let quizImgEl = $("#quizImg");
+let caffeineQuizModalEl = $("#caffeineQuizModal");
+quizImgEl.on("click", function () {
   console.log("click!!!!");
   caffeineQuizModalEl.addClass('is-active');
 })
 
-let modalCloseBtnEl = $('.modal-close');
-modalCloseBtnEl.on('click', function () {
-  diffDrinksModalEl.removeClass('is-active');
-  localModalEl.removeClass('is-active');
-  caffeineQuizModalEl.removeClass('is-active');
-})
+let modalCloseBtnEl = $(".modal-close");
+modalCloseBtnEl.on("click", function () {
+  diffDrinksModalEl.removeClass("is-active");
+  localModalEl.removeClass("is-active");
+  caffeineQuizModalEl.removeClass("is-active");
+});
