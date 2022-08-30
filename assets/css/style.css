@@ -30,6 +30,11 @@ height: 1200px;
     margin-right: 30%;
 }
 
+.cafeCard {
+    background-color: navy;
+    color: whitesmoke;
+}
+
 .footer{
     display: flex;
     bottom: 0px;
