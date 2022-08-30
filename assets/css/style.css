@@ -5,6 +5,7 @@
 .body {
   background-color: rgb(255, 252, 248);
   height: 1200px;
+  margin: 0;
 }
 
 .center{
@@ -20,7 +21,7 @@
   background-size: 750px 100%;
   background-position: center bottom;
   background-repeat: no-repeat;
-  background-color: rgb(49, 25, 25);
+  background-color: rgb(29, 10, 10);
   
 }
 
@@ -58,11 +59,14 @@
   margin-right: 30%;
 }
 
-.footer {
-  display: flex;
-  bottom: 0px;
-  align-items: center;
-  justify-content: center;
-  border: 3px;
-  border-color: black;
-}
+.bottom {
+    position: fixed;
+border-color: black;
+    border: 2px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: whitesmoke;
+    text-align: center;
+    background-color: rgb(29, 10, 10);
+  }
