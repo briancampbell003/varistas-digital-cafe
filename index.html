@@ -16,22 +16,28 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
 
-</head>
-
-<body class="body">
-  <div class="titleImage"></div>
+  <body class="body">
+    <div class="titleImage"></div>
     <header id="varistasHeader">
-        <h1 class="has-text-centered is-size-1 m-3">Varista's Digital Coffeeshop</h1>
+      <p class="has-text-centered m-3">
+        ~brought to you by MinhThu, Austin, Kalina, Brian~
+      </p>
     </header>
 
-    <container id="varistasThreeImgLinks" class="columns is-multiline is-centered">
-
+    <container
+      id="varistasThreeImgLinks"
+      class="columns is-multiline is-centered"
+    >
       <div id="drinksImg" class="column is-one-third">
         <figure class="image">
-          <img src="./assets/images/coffeeDrinks.png">
+          <img src="./assets/images/coffeeDrinks.png" />
         </figure>
       </div>
 
@@ -44,17 +50,23 @@
       <div id="local-cafe" class="column is-one-third">
         <div id="localImg">
           <figure class="image">
-            <img src="./assets/images/coffeeLocal.png">
+            <img src="./assets/images/coffeeLocal.png" />
           </figure>
         </div>
-        <input id="userZip" class="input" type="text" placeholder="Enter a Zipcode">
-        <button id="location-search" class="is-rounded" style="height:40px">Search</button>
-
+        <input
+          id="userZip"
+          class="input"
+          type="text"
+          placeholder="Enter a Zipcode"
+        />
+        <button id="location-search" class="is-rounded" style="height: 40px">
+          Search
+        </button>
       </div>
 
       <div id="quizImg" class="column is-one-third">
         <figure class="image">
-          <img src="./assets/images/coffeeQuiz.png">
+          <img src="./assets/images/coffeeQuiz.png" />
         </figure>
       </div>
     </container>
@@ -64,39 +76,35 @@
       <div id="diffDrinksModal" class="modal">
         <div class="modal-background"></div>
         <div class="modal-content">
-          <p>Learn about different coffee drinks!</p>
-        </div>
-      </div>
-      <div id="coffeePreference" class="card">
-        <section id="choice"></section>
-        <section id="drink" class="drink">
-          <ul>
-            <li>
-              <button id="hot">Hot</button>
-            </li>
-            <li>
-              <button id="ice">Iced</button>
-            </li>
-          </ul>
-        </section>
-        <div id="hotDiv"></div>
-        <div id="coldDiv"></div>
+          <div id="diffDrinksHeader" class="card">
+            <header class="card-header">
+              <p id="diffDrinksHeader" class="card-header-title is-centered">
+                Learn about different coffee drinks!
+              </p>
+            </header>
+            <div id="drinkButtons">
+              <button id="hot" class="button is-small is-warning mr-2">
+                Hot
+              </button>
+              <button id="ice" class="button is-small is-warning ml-2">
+                Iced
+              </button>
+            </div>
+          </div>
+          <div id="hotDiv" class="card"></div>
+          <div id="coldDiv" class="card"></div>
 
+          <button class="modal-close is-large" aria-label="close"></button>
         </div>
-        <button class="modal-close is-large" aria-label="close"></button>
       </div>
 
       <div id="localModal" class="modal">
-
-          <div class="modal-background"></div>
-          <div class="modal-content">
-
-            <p>HERE GOES MODAL TWO!!!!!</p>
-          </div>
-          <button class="modal-close is-large" aria-label="close"></button>
-
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <p>HERE GOES MODAL TWO!!!!!</p>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
       </div>
-
 
       <div id="caffeineQuizModal" class="modal">
         <div class="modal-background"></div>
@@ -108,7 +116,9 @@
               </p>
             </header>
             <div id="startBtnDiv">
-              <button class="button is-small is-warning" id="start-button">Start Coffee Quiz</button>
+              <button id="start-button" class="button is-small is-warning">
+                Start Coffee Quiz
+              </button>
             </div>
           </div>
 
@@ -116,26 +126,47 @@
             <section id="question"></section>
             <section id="answers" class="answers">
               <ul>
-                <li><button class="choices" id="answer1" value="a">Answer1</button></li>
-                <li><button class="choices" id="answer2" value="b">Answer2</button></li>
-                <li><button class="choices" id="answer3" value="c">Answer3</button></li>
-                <li><button class="choices" id="answer4" value="d">Answer4</button></li>
+                <li>
+                  <button class="choices" id="answer1" value="a">
+                    Answer1
+                  </button>
+                </li>
+                <li>
+                  <button class="choices" id="answer2" value="b">
+                    Answer2
+                  </button>
+                </li>
+                <li>
+                  <button class="choices" id="answer3" value="c">
+                    Answer3
+                  </button>
+                </li>
+                <li>
+                  <button class="choices" id="answer4" value="d">
+                    Answer4
+                  </button>
+                </li>
               </ul>
             </section>
           </div>
-          <div id="caffeineQuizOver" class="card">
-
-          </div>
+          <div id="caffeineQuizOver" class="card"></div>
         </div>
         <button class="modal-close is-large" aria-label="close"></button>
       </div>
     </container>
 
+    <header id="varistasFooter">
+      <h1 class="has-text-centered is-size-4 m-3">
+        "Good ideas start with brainstorming. GREAT ideas start with coffee.” -A
+        Coffee Person
+      </h1>
+    </header>
+
     <section id="coffeeQuoteSection"></section>
     <script src="./assets/js/recipes.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/quizScript.js"></script>
-    
+
     <!-- <script src="https://api.sampleapis.com/coffee/hot"></script>
     <script src="https://api.sampleapis.com/coffee/iced"></script> -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNLGWFyAU_z5xqx27RukSW8VqXSLA6_Cg&libraries=places&callback=initMap"></script>
