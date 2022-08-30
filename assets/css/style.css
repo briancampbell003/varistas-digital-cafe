@@ -16,15 +16,27 @@
 .titleImage {
   border: 1px black solid;
   height: 300px;
-  background-image: url("../images/varistasTitle");
-  background-size: cover;
-  background-position: -100px;
+  background-image: url("../images/varistasTitle.png");
+  background-size: 750px 100%;
+  background-position: center bottom;
   background-repeat: no-repeat;
-  background-position: center;
+  
 }
 
 #varistasHeader {
   font-style: italic;
+}
+
+.image {
+  border: 3px solid black;
+}
+
+#drinksImg {
+
+}
+
+#quizImg {
+
 }
 
 #quizHeader {
