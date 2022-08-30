@@ -3,8 +3,14 @@
 }
 
 .body {
-  background-color: rgb(247, 231, 210);
+  background-color: rgb(255, 252, 248);
   height: 1200px;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .titleImage {

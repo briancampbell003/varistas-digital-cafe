@@ -73,6 +73,9 @@ function callback(results, status) {
       var cafeName = document.createElement("div")
       var cafeAddress = document.createElement("div")
       var cafeRating = document.createElement("div")
+      
+
+
       cafeDetails.classList.add("card-header")
       cafeDetails.classList.add("level")
       cafeDetails.classList.add("box")
@@ -90,8 +93,8 @@ function callback(results, status) {
       cafeDetails.appendChild(cafeName);
       cafeDetails.appendChild(cafeAddress);
       cafeDetails.appendChild(cafeRating);
-      cafeName.innerHTML = results[i].name;
-      cafeAddress.innerHTML = results[i].vicinity;
+      cafeName.innerHTML = "Name: " + results[i].name;
+      cafeAddress.innerHTML = "Address: " + results[i].vicinity;
       cafeRating.innerHTML = "Rating: " + results[i].rating;
 
     }
@@ -118,12 +121,12 @@ drinksImgEl.on("click", function () {
   diffDrinksModalEl.addClass('is-active');
 })
 
-let localImgEl = $("#localImg");
-let localModalEl = $("#localModal");
-localImgEl.on("click", function () {
-  console.log("click!!!!");
-  localModalEl.addClass('is-active');
-})
+// let localImgEl = $("#localImg");
+// let localModalEl = $("#localModal");
+// localImgEl.on("click", function () {
+//   console.log("click!!!!");
+//   localModalEl.addClass('is-active');
+// })
 
 let quizImgEl = $("#quizImg");
 let caffeineQuizModalEl = $("#caffeineQuizModal");
