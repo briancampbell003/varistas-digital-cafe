@@ -38,7 +38,7 @@ let parseZip = function () {
   // let myLon = JSON.parse(localStorage.getItem("myLon"));
 };
 
-}
+
 
 let initMap = function (myLat, myLon) {
 
