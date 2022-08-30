@@ -93,8 +93,8 @@ function callback(results, status) {
       cafeDetails.appendChild(cafeName);
       cafeDetails.appendChild(cafeAddress);
       cafeDetails.appendChild(cafeRating);
-      cafeName.innerHTML = "Name: " + results[i].name;
-      cafeAddress.innerHTML = "Address: " + results[i].vicinity;
+      cafeName.innerHTML = results[i].name;
+      cafeAddress.innerHTML =  results[i].vicinity;
       cafeRating.innerHTML = "Rating: " + results[i].rating;
 
     }
