@@ -24,12 +24,13 @@
   <body class="body">
     <div class="titleImage"></div>
     <header id="varistasHeader">
-      <p class="has-text-centered m-3 is-size-7">
-        ~brought to you by MinhThu, Austin, Kalina, Brian~
+      <p class="has-text-centered m-1 is-size-5">
+        "Good ideas start with brainstorming. GREAT ideas start with coffee.” -A
+        Coffee Person
       </p>
     </header>
 
-  <container id="varistasThreeImgLinks" class="columns is-multiline is-centered p-5">
+  <container id="varistasThreeImgLinks" class="columns is-multiline is-centered p-1">
 
     <div id="drinksImg" class="column is-one-third">
       <figure class="image">
@@ -49,10 +50,10 @@
           <img src="./assets/images/coffeeLocal.png">
         </figure>
       </div>
-      <input id="userZip" class="input" type="text" placeholder="Enter a Zipcode">
+      <input id="userZip" class="input mt-5" type="text" placeholder="Enter a Zipcode">
       <div class="level-right">
-        <button id="location-search" class="button is-rounded is-warning is-light is-outlined m-2" style="height:40px">Search</button>
-        <button id="clear-search" class="button is-rounded is-warning is-light is-outlined p-20 m-2" style="height:40px">Clear</button>
+        <button id="location-search" class="button is-warning is-light is-outlined m-2" style="height:40px">Search</button>
+        <button id="clear-search" class="button is-warning is-light is-outlined p-20 m-2" style="height:40px">Clear</button>
       </div>
       <div id="local-cafe"></div>
 
@@ -105,20 +106,20 @@
         <div class="modal-content m-3">
           <div id="caffeineQuizStart" class="card">
             <header class="card-header">
-              <p id="quizHeader" class="card-header-title is-centered">
+              <p id="quizHeader" class="is-size-3 card-header-title is-centered m-5 p-5">
                 Caffeine Intake Quiz
               </p>
             </header>
             <div id="startBtnDiv">
-              <button id="start-button" class="button is-small is-warning">
+              <button id="start-button" class="button is-large is-warning">
                 Start Coffee Quiz
               </button>
             </div>
           </div>
 
           <div id="caffeineQuizMain" class="card hide">
-            <section id="question" class="m-2"></section>
-            <section id="answers" class="answers">
+            <section id="question" class="m-2 is-size-5" style="text-align: center;"></section>
+            <section id="answers" class="answers center">
               <ul>
                 <li>
                   <button class="choices m-1" style="width: 90px;" id="answer1" value="a">
@@ -149,18 +150,29 @@
       </div>
     </container>
 
-    <header id="varistasFooter">
-      <h1 class="has-text-centered is-size-4 m-3">
-        "Good ideas start with brainstorming. GREAT ideas start with coffee.” -A
-        Coffee Person
-      </h1>
-    </header>
+
+      <p class="has-text-centered is-size-6 bottom p-0">
+        ~brought to you by MinhThu, Austin, Kalina, Brian~
+      </p>
+
 
     <section id="coffeeQuoteSection"></section>
     <script src="./assets/js/recipes.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/quizScript.js"></script>
-
+    <iframe
+      allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+      frameborder="0"
+      height="450"
+      style="
+        width: 100%;
+        max-width: 500px;
+        overflow: hidden;
+        background: transparent;
+      "
+      sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+      src="https://embed.music.apple.com/us/album/rainy-jazz-relaxing-jazz-radio/1372037948"
+    ></iframe>
     <!-- <script src="https://api.sampleapis.com/coffee/hot"></script>
     <script src="https://api.sampleapis.com/coffee/iced"></script> -->
   <script
