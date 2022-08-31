@@ -40,7 +40,7 @@
 }
 
 .footer {
-  display: flex;
+  display: fixed;
   bottom: 0px;
   align-items: center;
   justify-content: center;
