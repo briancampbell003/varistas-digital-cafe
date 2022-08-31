@@ -5,6 +5,8 @@ var localCafe = document.getElementById('local-cafe')
 let locationSrc = document.getElementById('location-search')
 let clearSrc = document.getElementById('clear-search')
 var APIKey = "AIzaSyB3VMeBFz-DJaBsgblYF9eYo8WE1Ezjk2o"
+
+
 // var cafeName = document.getElementById('cafe-name')
 // var cafeAddress = document.getElementById('cafe-address')
 // var cafePic = document.getElementById('cafe-pic')
