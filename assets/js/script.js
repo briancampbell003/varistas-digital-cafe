@@ -8,12 +8,6 @@ var historyEl = document.getElementById('srcHistory')
 
 var APIKey = "AIzaSyDNLGWFyAU_z5xqx27RukSW8VqXSLA6_Cg"
 
-// let searchHistory = JSON.parse(localStorage.getItem("Recent Search: ")) || [];
-
-
-// var cafeName = document.getElementById('cafe-name')
-// var cafeAddress = document.getElementById('cafe-address')
-// var cafePic = document.getElementById('cafe-pic')
 
 
 
@@ -24,7 +18,7 @@ let parseZip = function () {
 
   let myPlace = $("#userZip").val();
   localCafe.innerHTML = "";
-  // let myPlace = "60208";
+
 
 
   let localUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + myPlace + "&key=" + APIKey;
@@ -36,7 +30,6 @@ let parseZip = function () {
           let myLon = data.results[0].geometry.location.lng;
           let history = data.results[0].address_components[0].long_name;
           
-          // localStorage.setItem("Recent Search: ", JSON.stringify(history));
 
           console.log(data);
           console.log(history);
@@ -53,10 +46,6 @@ let parseZip = function () {
         });
       }
     })
-
-  // let myLat = JSON.parse(localStorage.getItem("myLat"));
-  // let myLon = JSON.parse(localStorage.getItem("myLon"));
-
 };
 
 
@@ -133,17 +122,11 @@ function displayHistory() {
   
   historyEl.innerHTML = "";
   for (let i = 0; i <= 5; i++){
-    // let recentZip = oldData[i].zip; -- This was breaking the append methods on search button click
 
     const recentZipEl = document.createElement("button");
 
     recentZipEl.innerHTML = oldData[i].zip;
     recentZipEl.classList.add("history")
-    // historyEl.appendChild(recentZipEl);
-    
-    // recentZipEl.setAttribute("type", "text");
-    // recentZipEl.setAttribute("class", "form-control d-block bg-white");
-    // recentZipEl.setAttribute("value", recentZip);
     recentZipEl.addEventListener("click", function(){
         let myLat = oldData[i].data.results[0].geometry.location.lat;
         let myLon = oldData[i].data.results[0].geometry.location.lng;
