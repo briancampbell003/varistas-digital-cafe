@@ -1,0 +1,120 @@
+.hide {
+  display: none;
+}
+
+.body {
+  background-image: url("../images/bgTEST.png");
+  background-repeat: repeat;
+
+
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleImage {
+  border: 1px black solid;
+  height: auto;
+  background-image: url("../images/varistasTitleNOTEXT.png");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(29, 10, 10);
+}
+
+#titleText {
+
+  position: relative;
+  bottom: 20px;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  margin-top: 225px;
+  font-size: 40px;
+  color: whitesmoke;
+  background-color: rgb(139, 128, 115);
+  font-weight: bolder;
+  font-family: 'Times New Roman', Times, serif;
+  border: solid black 3px;
+
+}
+
+#varistasHeader {
+  font-style: italic;
+}
+
+.image {
+  border: 3px solid black;
+}
+
+#quizHeader {
+  color: rgb(65, 35, 10);
+  background-color: antiquewhite;
+}
+
+#caffeineQuizOver {
+  padding: 5px;
+  margin: 5px;
+  font-size: 18px;
+}
+
+#start-button {
+  text-align: center;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+#drinkButtons {
+  text-align: center;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+
+.drinkImage {
+  width: 300px;
+  height: 300px;
+
+}
+
+.bottom {
+  position: fixed;
+  border-color: black;
+  border: 2px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: whitesmoke;
+  text-align: center;
+  background-color: rgb(29, 10, 10);
+}
+
+.history{
+  border: 3px;
+  border-color: rgb(29, 10, 10);
+  margin: 8px;
+  padding: 10px;
+  font-size: 20px;
+  background-color: rgb(68, 34, 34);
+  color: white;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 760px) {
+#titleText {
+  display: none
+}
+.titleImage {
+  border: 1px black solid;
+  height: 300px;
+  background-image: url("../images/varistasTitle.png");
+  background-size: 750px 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-color: rgb(29, 10, 10);
+}
+}
