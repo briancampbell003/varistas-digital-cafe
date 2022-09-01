@@ -132,11 +132,11 @@ function displayHistory() {
   
   historyEl.innerHTML = "";
   for (let i = 0; i <= 5; i++){
-    let recentZip = oldData[i].zip;
+    // let recentZip = oldData[i].zip; -- This was breaking the append methods on search button click
 
     const recentZipEl = document.createElement("button");
 
-    recentZipEl.innerHTML = recentZip;
+    recentZipEl.innerHTML = oldData[i].zip;
     recentZipEl.classList.add("history")
     // historyEl.appendChild(recentZipEl);
     
