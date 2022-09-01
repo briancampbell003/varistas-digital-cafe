@@ -4,12 +4,20 @@ var infowindow;
 var localCafe = document.getElementById('local-cafe')
 let locationSrc = document.getElementById('location-search')
 let clearSrc = document.getElementById('clear-search')
-var APIKey = "AIzaSyB3VMeBFz-DJaBsgblYF9eYo8WE1Ezjk2o"
+var historyEl = document.getElementById('srcHistory')
+
+var APIKey = "AIzaSyDNLGWFyAU_z5xqx27RukSW8VqXSLA6_Cg"
+
+// let searchHistory = JSON.parse(localStorage.getItem("Recent Search: ")) || [];
 
 
 // var cafeName = document.getElementById('cafe-name')
 // var cafeAddress = document.getElementById('cafe-address')
 // var cafePic = document.getElementById('cafe-pic')
+
+
+
+
 
 
 let parseZip = function () {
@@ -26,11 +34,20 @@ let parseZip = function () {
         response.json().then(function (data) {
           let myLat = data.results[0].geometry.location.lat;
           let myLon = data.results[0].geometry.location.lng;
-          // localStorage.setItem("myLat", JSON.stringify(myLat));
-          // localStorage.setItem("myLon", JSON.stringify(myLon));
+          let history = data.results[0].address_components[0].long_name;
+          
+          // localStorage.setItem("Recent Search: ", JSON.stringify(history));
+
           console.log(data);
+          console.log(history);
           console.log(myLat);
           console.log(myLon);
+
+          let savedData = {zip: history, data: data};
+          let savedDataArr = JSON.parse(localStorage.getItem("savedData")) || [];
+          savedDataArr.push(savedData);
+          localStorage.setItem("savedData", JSON.stringify(savedDataArr));
+          displayHistory(savedDataArr);
           initMap(myLat, myLon);
         });
       }
@@ -38,11 +55,12 @@ let parseZip = function () {
 
   // let myLat = JSON.parse(localStorage.getItem("myLat"));
   // let myLon = JSON.parse(localStorage.getItem("myLon"));
+
 };
 
 
 
-let initMap = function (myLat, myLon) {
+function initMap (myLat, myLon) {
 
   var myPlace = new google.maps.LatLng(myLat, myLon);
   console.log(myPlace);
@@ -99,11 +117,47 @@ function callback(results, status) {
       cafeAddress.innerHTML =  results[i].vicinity;
       cafeRating.innerHTML = "Rating: " + results[i].rating;
 
+
+
     }
   } else {
     console.log("Bad request");
   }
 }
+
+
+
+function displayHistory() {
+  let oldData = JSON.parse(localStorage.getItem("savedData")) || [];
+  
+  historyEl.innerHTML = "";
+  for (let i = 0; i <= 5; i++){
+    let recentZip = oldData[i].zip;
+
+    const recentZipEl = document.createElement("button");
+
+    recentZipEl.innerHTML = recentZip;
+    recentZipEl.classList.add("history")
+    // historyEl.appendChild(recentZipEl);
+    
+    // recentZipEl.setAttribute("type", "text");
+    // recentZipEl.setAttribute("class", "form-control d-block bg-white");
+    // recentZipEl.setAttribute("value", recentZip);
+    recentZipEl.addEventListener("click", function(){
+        let myLat = oldData[i].data.results[0].geometry.location.lat;
+        let myLon = oldData[i].data.results[0].geometry.location.lng;
+        localCafe.innerHTML = "";
+        initMap(myLat, myLon);
+        callback();
+    })
+    historyEl.appendChild(recentZipEl);
+    
+  }
+}
+
+
+
+//Event listeners begin here
 
 locationSrc.addEventListener("click", function () {
   console.log("CLICK");
@@ -139,7 +193,8 @@ quizImgEl.on("click", function () {
 
 let modalCloseBtnEl = $(".modal-close");
 modalCloseBtnEl.on("click", function () {
-  diffDrinksModalEl.removeClass("is-active");
-  localModalEl.removeClass("is-active");
-  caffeineQuizModalEl.removeClass("is-active");
+  console.log("click to CLOSE");
+  diffDrinksModalEl.removeClass('is-active');
+  caffeineQuizModalEl.removeClass('is-active');
 });
+

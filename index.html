@@ -15,20 +15,19 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-  </head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+</head>
 
-  <body class="body">
-    <div class="titleImage"></div>
-    <header id="varistasHeader">
-      <p class="has-text-centered m-1 is-size-5">
-        "Good ideas start with brainstorming. GREAT ideas start with coffee.” -A
-        Coffee Person
-      </p>
-    </header>
+<body class="body">
+  <div class="titleImage">
+    <h1 id="titleText">Varistas Digital Coffeeshop</h1>
+  </div>
+  <header id="varistasHeader">
+    <p class="has-text-centered m-1 is-size-5">
+      "Good ideas start with brainstorming. GREAT ideas start with coffee.” -A
+      Coffee Person
+    </p>
+  </header>
 
   <container id="varistasThreeImgLinks" class="columns is-multiline is-centered p-1">
 
@@ -52,8 +51,10 @@
       </div>
       <input id="userZip" class="input mt-5" type="text" placeholder="Enter a Zipcode">
       <div class="level-right">
-        <button id="location-search" class="button is-warning is-light is-outlined m-2" style="height:40px">Search</button>
-        <button id="clear-search" class="button is-warning is-light is-outlined p-20 m-2" style="height:40px">Clear</button>
+        <button id="location-search" class="button is-warning is-light is-outlined m-2"
+          style="height:40px">Search</button>
+        <button id="clear-search" class="button is-warning is-light is-outlined p-20 m-2"
+          style="height:40px">Clear</button>
       </div>
       <div id="local-cafe"></div>
 
@@ -66,117 +67,122 @@
     </div>
   </container>
 
-    <container id="varistasThreeModals">
-      <!-- ADD CLASS "is-active" IN JS TO THESE ELEMENTS onClick -->
-      <div id="diffDrinksModal" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-          <div id="diffDrinksHeader" class="card">
-            <header class="card-header">
-              <p id="diffDrinksHeader" class="card-header-title is-centered">
-                Learn about different coffee drinks!
-              </p>
-            </header>
-            <div id="drinkButtons">
-              <button id="hot" class="button is-small is-warning mr-2 mb-2 mt-2">
-                Hot
-              </button>
-              <button id="ice" class="button is-small is-warning ml-2 mb-2 mt-2">
-                Iced
-              </button>
-            </div>
-          </div>
-          <div id="hotDiv" class="card"></div>
-          <div id="coldDiv" class="card"></div>
+  <container id="varistasThreeModals">
 
-          <button class="modal-close is-large" aria-label="close"></button>
+    <div id="diffDrinksModal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div id="diffDrinksHeader" class="card">
+          <header class="card-header">
+            <p id="diffDrinksHeader" class="card-header-title is-centered p-5 is-size-4">
+              Learn about different coffee drinks!
+            </p>
+          </header>
+          <div id="drinkButtons">
+            <button id="hot" class="button is-small is-warning mr-2 mb-2 mt-2">
+              Hot
+            </button>
+            <button id="ice" class="button is-small is-warning ml-2 mb-2 mt-2">
+              Iced
+            </button>
+          </div>
         </div>
+        <div id="hotDiv" class="card p-5 m-2 hide"></div>
+        <div id="coldDiv" class="card p-5 m-2 hide"></div>
+
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <div id="localModal" class="modal is-one-third" style="display: flex">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <p>HERE GOES MODAL TWO!!!!!</p>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <div id="caffeineQuizModal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content m-3">
+        <div id="caffeineQuizStart" class="card">
+          <header class="card-header">
+            <p id="quizHeader" class="is-size-3 card-header-title is-centered m-5 p-5">
+              Caffeine Intake Quiz
+            </p>
+          </header>
+          <div id="startBtnDiv">
+            <button id="start-button" class="button is-large is-warning">
+              Start Coffee Quiz
+            </button>
+          </div>
+        </div>
+
+        <div id="caffeineQuizMain" class="card hide">
+          <section id="question" class="m-2 is-size-5" style="text-align: center"></section>
+          <section id="answers" class="answers center">
+            <ul>
+              <li>
+                <button class="choices m-1" style="width: 90px;" id="answer1" value="a">
+                  Answer1
+                </button>
+              </li>
+              <li>
+                <button class="choices m-1" style="width: 90px;" id="answer2" value="b">
+                  Answer2
+                </button>
+              </li>
+              <li>
+                <button class="choices m-1" style="width: 90px;" id="answer3" value="c">
+                  Answer3
+                </button>
+              </li>
+              <li>
+                <button class="choices m-1" style="width: 90px;" id="answer4" value="d">
+                  Answer4
+                </button>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div id="caffeineQuizOver" class="card hide"></div>
+
       </div>
 
-      <div id="localModal" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-          <p>HERE GOES MODAL TWO!!!!!</p>
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+  </container>
 
-      <div id="caffeineQuizModal" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content m-3">
-          <div id="caffeineQuizStart" class="card">
-            <header class="card-header">
-              <p id="quizHeader" class="is-size-3 card-header-title is-centered m-5 p-5">
-                Caffeine Intake Quiz
-              </p>
-            </header>
-            <div id="startBtnDiv">
-              <button id="start-button" class="button is-large is-warning">
-                Start Coffee Quiz
-              </button>
-            </div>
-          </div>
+  <div id="srcHistory" class="center"></div>
 
-          <div id="caffeineQuizMain" class="card hide">
-            <section id="question" class="m-2 is-size-5" style="text-align: center;"></section>
-            <section id="answers" class="answers center">
-              <ul>
-                <li>
-                  <button class="choices m-1" style="width: 90px;" id="answer1" value="a">
-                    Answer1
-                  </button>
-                </li>
-                <li>
-                  <button class="choices m-1" style="width: 90px;" id="answer2" value="b">
-                    Answer2
-                  </button>
-                </li>
-                <li>
-                  <button class="choices m-1" style="width: 90px;" id="answer3" value="c">
-                    Answer3
-                  </button>
-                </li>
-                <li>
-                  <button class="choices m-1" style="width: 90px;" id="answer4" value="d">
-                    Answer4
-                  </button>
-                </li>
-              </ul>
-            </section>
-          </div>
-          <div id="caffeineQuizOver" class="card"></div>
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-      </div>
-    </container>
+  <p class="has-text-centered is-size-6 bottom p-0">
+    ~brought to you by Austin, Brian, Kalina, & MinhThu~
+  </p>
 
 
-      <p class="has-text-centered is-size-6 bottom p-0">
-        ~brought to you by MinhThu, Austin, Kalina, Brian~
-      </p>
+  <section id="coffeeQuoteSection"></section>
 
-
-    <section id="coffeeQuoteSection"></section>
-    <script src="./assets/js/recipes.js"></script>
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/quizScript.js"></script>
-    <iframe
-      allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-      frameborder="0"
-      height="450"
-      style="
+  <div class="center">
+  <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" 
+    height="450" style="
         width: 100%;
         max-width: 500px;
         overflow: hidden;
         background: transparent;
       "
-      sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-      src="https://embed.music.apple.com/us/album/rainy-jazz-relaxing-jazz-radio/1372037948"
-    ></iframe>
-    <!-- <script src="https://api.sampleapis.com/coffee/hot"></script>
-    <script src="https://api.sampleapis.com/coffee/iced"></script> -->
+    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+    src="https://embed.music.apple.com/us/album/rainy-jazz-relaxing-jazz-radio/1372037948"></iframe>
+  </div>
+
+  <script src="./assets/js/recipes.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/quizScript.js"></script>
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNLGWFyAU_z5xqx27RukSW8VqXSLA6_Cg&libraries=places&callback=initMap"></script>
+
+
+
 </body>
 
 </html>

@@ -73,6 +73,7 @@ function quizOver(caffeineScore) {
   $('#caffeineQuizStart').children(1).eq(1).addClass( "hide" );
 
   let quizResultsEl = $('#caffeineQuizOver');
+  quizResultsEl.removeClass( "hide" );
   if (caffeineScore < 2) {
     quizResultsEl.text ("Doctor, doctor, get us a coffee, stat! Return to our main page to find coffee recipes or local cafes!")
   } else if ( (2 <= caffeineScore) & (caffeineScore <= 5) ) {
