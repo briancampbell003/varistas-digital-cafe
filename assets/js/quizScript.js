@@ -75,7 +75,7 @@ function quizOver(caffeineScore) {
   let quizResultsEl = $('#caffeineQuizOver');
   quizResultsEl.removeClass( "hide" );
   if (caffeineScore < 2) {
-    quizResultsEl.text ("Doctor, doctor, get us a coffee, stat! Return to our main page to find coffee recipes or local cafes!")
+    quizResultsEl.text ("Doctor, doctor, get us a coffee, stat! Return to our main page to find coffee recipes or local cafes.")
   } else if ( (2 <= caffeineScore) & (caffeineScore <= 5) ) {
     quizResultsEl.text ("You've had a fair amount of caffeine today, but feel free to return to our main page for drink ideas or to find a local cafe!")
   } else {
