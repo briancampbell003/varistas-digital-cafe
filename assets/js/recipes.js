@@ -8,13 +8,16 @@ var icedIndex = 0;
 
 
 function getColdData() {
+
   const coldURL = "https://api.sampleapis.com/coffee/iced";
   fetch(coldURL)
     .then((resp) => resp.json())
     .then((data) => displayIceData(data));
 }
 function displayIceData(data) {
-  iceDiv.removeClass("hide");
+
+  // warmDiv.removeClass("hide");
+  // iceDiv.removeClass("hide");
 
   // Empty Ice coffee old info
   warmDiv.innerHTML = "";
@@ -59,13 +62,16 @@ var hotCoffee = document.querySelector("#hot");
 var hotIndex = 0;
 
 function getHotData() {
+
   const hotURL = "https://api.sampleapis.com/coffee/hot";
   fetch(hotURL)
     .then((resp) => resp.json())
     .then((data) => displayHotData(data));
 }
 function displayHotData(data) {
-  warmDiv.removeClass("hide");
+
+  // warmDiv.removeClass("hide");
+  // iceDiv.removeClass("hide");
 
   // Empty Hot coffee old info
   iceDiv.innerHTML = "";
