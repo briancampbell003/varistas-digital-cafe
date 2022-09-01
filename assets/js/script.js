@@ -84,7 +84,7 @@ function initMap (myLat, myLon) {
 
 function callback(results, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
-    for (var i = 0; i <= 5; i++) {
+    for (var i = 0; i < 5; i++) {
       console.log(results[i]);
 
 
@@ -132,7 +132,7 @@ function displayHistory() {
   let oldData = JSON.parse(localStorage.getItem("savedData")) || [];
   
   historyEl.innerHTML = "";
-  for (let i = 0; i < 5; i++){
+  for (let i = 0; i <= 5; i++){
     // let recentZip = oldData[i].zip; -- This was breaking the append methods on search button click
 
     const recentZipEl = document.createElement("button");
