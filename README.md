@@ -19,8 +19,4 @@ We used various free internet resources as reference for syntax and general idea
 Here is a screenshot:
 ![screenshot of coding quiz webpage](./assets/images/demo.png)
 
-
-I hope you appreciate this site, you can find a demo at:
-I hope you appreciate this Digital Cofeeshop, you can check it out at the [deployed GitHub webpage.](https://project1team1.github.io/Project1/)
-
 I hope you appreciate this Digital Cofeeshop, you can check it out at the [deployed GitHub webpage.](https://project1team1.github.io/Project1/)
