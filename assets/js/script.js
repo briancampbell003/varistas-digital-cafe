@@ -93,6 +93,7 @@ function callback(results, status) {
       cafeDetails.classList.add("has-text-white")
       cafeDetails.classList.add("is-one-third")
 
+
       
 
       console.log(cafeLink);
